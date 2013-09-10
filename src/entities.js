@@ -6,14 +6,13 @@ Crafty.c('Object', {
 
 Crafty.c('Player', {
     init: function(){
-        this.requires('Object, Gravity, Collision')
+        this.requires('Object, Gravity, Collision, Twoway')
             .attr({
-                x: 10,
-                y: 10,
-                w: 10,
-                h: 10
+                w: 16,
+                h: 32
             })
             .color('yellow')
+            .twoway(4, 4)
             .gravity('Solid');
     }
 });
